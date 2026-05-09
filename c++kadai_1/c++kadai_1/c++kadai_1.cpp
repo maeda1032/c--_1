@@ -6,6 +6,8 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <stdlib.h>
+#include <time.h>	
 
 using namespace std;
 
@@ -17,21 +19,19 @@ int main()
 	float social;
 	float english;
 
+	srand(time(NULL));
 
-	cout << "国語の点数\n";
-	cin >> japanese;
 
-	cout << "数学の点数\n";
-	cin >> math;
+    japanese = (float)(rand() % 100 - 0) + 1;
 
-	cout << "理科の点数\n";
-	cin >> science;
+	math = (float)(rand() % 100 - 0) + 1;
 
-	cout << "社会の点数\n";
-	cin >> social;
+	science = (float)(rand() % 100 - 0) + 1;
 
-	cout << "英語の点数\n";
-	cin >> english;
+	social = (float)(rand() % 100 - 0) + 1;
+
+	english = (float)(rand() % 100 - 0) + 1;
+
 
 	float x = (float)japanese + (float)math + (float)science + (float)social + (float)english;
 	float y = x / 5;
